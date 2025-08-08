@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>PULKAM78 - JUDOL</title>
+  <style>
+    /* ---------- Warna: Merah & Emas ---------- */
+    :root{
+      --merah:#b30000;
+      --emas:#d4af37;
+      --bg:#fff7ef;
+      --text:#222;
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      font-family:system-ui,-apple-system,Segoe UI,Roboto, "Helvetica Neue", Arial;
+      background:var(--bg);
+      color:var(--text);
+      -webkit-font-smoothing:antialiased;
+      line-height:1.45;
+    }
+
+    /* Header */
+    .site-header{
+      background: linear-gradient(180deg, var(--merah), #8f0000);
+      color:var(--emas);
+      text-align:center;
+      padding:28px 16px;
+      box-shadow:0 4px 12px rgba(0,0,0,0.12);
+    }
+    .logo{
+      font-size:clamp(28px,6vw,44px);
+      font-weight:800;
+      letter-spacing:4px;
+      margin:0;
+    }
+    .subtitle{
+      margin:6px 0 0;
+      font-size:clamp(14px,3vw,18px);
+      font-weight:600;
+    }
+
+    /* Navigation (simple) */
+    nav{
+      display:flex;
+      justify-content:center;
+      gap:14px;
+      margin-top:14px;
+    }
+    nav a{
+      color:var(--emas);
+      text-decoration:none;
+      font-weight:600;
+      padding:6px 10px;
+      border-radius:8px;
+      transition:all .18s;
+      background:rgba(255,255,255,0.03);
+    }
+    nav a:hover{ transform:translateY(-2px); background:rgba(255,255,255,0.06)}
+
+    /* Main */
+    main{padding:22px; max-width:980px; margin:18px auto}
+    .hero{
+      background:linear-gradient(90deg, rgba(179,0,0,0.06), rgba(212,175,55,0.03));
+      border:2px solid rgba(179,0,0,0.08);
+      padding:18px;
+      border-radius:12px;
+      text-align:center;
+    }
+    .hero h2{color:var(--merah); margin:0 0 8px;}
+    .hero p{margin:0; font-weight:500}
+
+    /* Cards */
+    .grid{display:grid; gap:12px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); margin-top:16px}
+    .card{
+      background:white;
+      border-radius:10px;
+      padding:12px;
+      box-shadow:0 3px 8px rgba(0,0,0,0.06);
+      border-left:6px solid var(--merah);
+    }
+    .card h3{margin:0 0 6px; color:var(--merah)}
+    .card p{margin:0; font-size:0.95rem}
+
+    /* Gallery kecil */
+    .gallery{
+      display:flex;
+      gap:8px;
+      margin-top:12px;
+      flex-wrap:wrap;
+      justify-content:center;
+    }
+    .thumb{
+      width:120px;height:80px;border-radius:8px;
+      background:linear-gradient(135deg,var(--merah), #a50000);
+      display:flex;align-items:center;justify-content:center;color:var(--emas);
+      font-weight:700; box-shadow:0 2px 6px rgba(0,0,0,0.12)
+    }
+
+    /* Contact/footer */
+    .contact{
+      margin-top:18px;
+      padding:12px;
+      border-radius:8px;
+      background:linear-gradient(180deg, rgba(212,175,55,0.06), rgba(179,0,0,0.02));
+      border:1px solid rgba(212,175,55,0.12);
+    }
+    .btn{
+      display:inline-block;
+      background:var(--merah);
+      color:var(--emas);
+      padding:8px 12px;
+      border-radius:8px;
+      text-decoration:none;
+      font-weight:700;
+      margin-top:8px;
+    }
+
+    footer{
+      margin-top:22px;
+      padding:16px;
+      text-align:center;
+      font-size:0.9rem;
+      color:#5b1b1b;
+    }
+
+    /* Responsive spacing for small devices */
+    @media (max-width:420px){
+      .thumb{width:100px;height:70px}
+      nav{gap:8px}
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div>
+      <h1 class="logo">PULKAM78</h1>
+      <div class="subtitle">JUDOL</div>
+      <nav aria-label="Main navigation">
+        <a href="#about">Tentang</a>
+        <a href="#galeri">Galeri</a>
+        <a href="#kontak">Kontak</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="about">
+      <h2>Selamat Datang di PULKAM78</h2>
+      <p>Website sederhana bertema Merah &amp; Emas — bisa dibuka langsung dari HP.</p>
+    </section>
+
+    <div class="grid" aria-live="polite">
+      <article class="card">
+        <h3>Visi</h3>
+        <p>Menghadirkan karya dan informasi dengan tampilan kuat, elegan, dan mudah diakses.</p>
+      </article>
+
+      <article class="card">
+        <h3>Misi</h3>
+        <p>Menghubungkan komunitas, berbagi berita, dan memamerkan proyek-proyek kreatif.</p>
+      </article>
+
+      <article class="card">
+        <h3>Berita</h3>
+        <p>Update singkat: situs ini contoh statis, kamu bisa tambah halaman atau form kapan saja.</p>
+      </article>
+    </div>
+
+    <section id="galeri" style="margin-top:18px">
+      <h3 style="color:var(--merah); text-align:center">Galeri</h3>
+      <div class="gallery" role="list">
+        <div class="thumb" role="listitem">Logo</div>
+        <div class="thumb" role="listitem">Foto 1</div>
+        <div class="thumb" role="listitem">Foto 2</div>
+        <div class="thumb" role="listitem">Foto 3</div>
+      </div>
+    </section>
+
+    <section id="kontak" class="contact">
+      <h3>Kontak</h3>
+      <p>Ingin menghubungi tim PULKAM78? Klik tombol di bawah untuk kirim email.</p>
+      <a class="btn" href="mailto:email@contoh.com?subject=Kontak%20PULKAM78">KIRIM EMAIL</a>
+      <p style="margin-top:10px;font-size:0.9rem;color:#5b1b1b">Atau simpan halaman ini dan edit bagian &ldquo;email@contoh.com&rdquo; sesuai alamatmu.</p>
+    </section>
+
+    <footer>
+      &copy; <span id="tahun"></span> PULKAM78 — All rights reserved.
+    </footer>
+  </main>
+
+  <script>
+    // set tahun di footer
+    document.getElementById('tahun').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
